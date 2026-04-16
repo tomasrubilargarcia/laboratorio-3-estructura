@@ -23,3 +23,19 @@ hashmap.c:47:26: note: declared here
    47 | HashMap * createMap(long capacity) {
       |                     ~~~~~^~~~~~~~
 0412d94
+Thu Apr 16 08:35:44 PM UTC 2026: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:51:65: error: expected expression before ‘Pair’
+   51 |         nuevoMapa->buckets = (Pair**) malloc(sizeof * capacity (Pair*));
+      |                                                                 ^~~~
+hashmap.c:51:55: error: called object ‘capacity’ is not a function or function pointer
+   51 |         nuevoMapa->buckets = (Pair**) malloc(sizeof * capacity (Pair*));
+      |                                                       ^~~~~~~~
+hashmap.c:47:26: note: declared here
+   47 | HashMap * createMap(long capacity) {
+      |                     ~~~~~^~~~~~~~
+7e5a857
