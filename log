@@ -2,3 +2,24 @@ Thu Apr 16 08:05:14 PM UTC 2026:
  tests:  0|7
 total_score: 0/60
 d00afa1
+Thu Apr 16 08:33:53 PM UTC 2026: 
+ hashmap.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:51:65: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+   51 |         nuevoMapa->buckets = (Pair**) malloc(sizeof * capacity (pair*));
+      |                                                                 ^~~~
+      |                                                                 Pair
+hashmap.c:51:65: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:51:70: error: expected expression before ‘)’ token
+   51 |         nuevoMapa->buckets = (Pair**) malloc(sizeof * capacity (pair*));
+      |                                                                      ^
+hashmap.c:51:55: error: called object ‘capacity’ is not a function or function pointer
+   51 |         nuevoMapa->buckets = (Pair**) malloc(sizeof * capacity (pair*));
+      |                                                       ^~~~~~~~
+hashmap.c:47:26: note: declared here
+   47 | HashMap * createMap(long capacity) {
+      |                     ~~~~~^~~~~~~~
+0412d94
