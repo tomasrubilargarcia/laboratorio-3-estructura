@@ -48,7 +48,7 @@ HashMap * createMap(long capacity) {
     HashMap* nuevoMapa = (HashMap*) malloc(sizeof(HashMap));
     if (nuevoMapa != NULL){
         //inicializamos los buckets una reserva de memoria de tipo pair
-        nuevoMapa->buckets = (Pair**) malloc(sizeof * capacity (Pair *));
+        nuevoMapa->buckets = (Pair**) malloc(capacity * sizeof (Pair *));
 
     for (long i=0; i<capacity; i++){
         nuevoMapa->buckets[i] = NULL;
