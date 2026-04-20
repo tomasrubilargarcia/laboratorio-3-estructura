@@ -142,3 +142,29 @@ Mon Apr 20 02:33:49 AM UTC 2026:
  tests:  16|1
 total_score: 50/60
 eb51d51
+Mon Apr 20 02:43:33 AM UTC 2026: 
+ hashmap.c | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:211:5: error: ‘maps’ undeclared (first use in this function); did you mean ‘map’?
+  211 |     maps->buckets = malloc(map->capacity * sizeof(Pair *));
+      |     ^~~~
+      |     map
+hashmap.c:211:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:219:18: error: expected ‘;’ before ‘for’
+  219 |     map->size = 0 //en 0 para que vaya incrementando al volver a insertar los datos
+      |                  ^
+      |                  ;
+......
+  222 |     for (long i=0; i < oldCapacity; i++){
+      |     ~~~           
+hashmap.c:207:12: error: unused variable ‘oldBuckets’ [-Werror=unused-variable]
+  207 |     Pair** oldBuckets = map->buckets;
+      |            ^~~~~~~~~~
+hashmap.c:206:10: error: unused variable ‘oldCapacity’ [-Werror=unused-variable]
+  206 |     long oldCapacity = map->capacity;
+      |          ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+28854be
