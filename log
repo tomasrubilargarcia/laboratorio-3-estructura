@@ -99,3 +99,26 @@ Mon Apr 20 02:31:35 AM UTC 2026:
  tests:  12|2
 total_score: 40/60
 2eefb64
+Mon Apr 20 02:33:19 AM UTC 2026: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:161:40: error: ‘maps’ undeclared (first use in this function); did you mean ‘map’?
+  161 |         if (map->buckets[i] != NULL && maps->buckets[i]-> != NULL){
+      |                                        ^~~~
+      |                                        map
+hashmap.c:161:40: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:161:59: error: expected identifier before ‘!=’ token
+  161 |         if (map->buckets[i] != NULL && maps->buckets[i]-> != NULL){
+      |                                                           ^~
+hashmap.c: In function ‘nextMap’:
+hashmap.c:177:40: error: ‘maps’ undeclared (first use in this function); did you mean ‘map’?
+  177 |         if (map->buckets[i] != NULL && maps->buckets[i]-> != NULL){
+      |                                        ^~~~
+      |                                        map
+hashmap.c:177:59: error: expected identifier before ‘!=’ token
+  177 |         if (map->buckets[i] != NULL && maps->buckets[i]-> != NULL){
+      |                                                           ^~
+bff7858
