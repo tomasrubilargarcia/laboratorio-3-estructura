@@ -76,6 +76,27 @@ HashMap * createMap(long capacity) {
 
 void insertMap(HashMap * map, char * key, void * value) {
 
+    long indice = hash(key, map->capacity); //calculo indice inicial
+
+    //busco casilla libre y que posea la misma key
+    while (map->buckets[indice] != NULL && strcmp(map->buckets[indice]->key, key) != 0){
+        indice = (indice +1) % map->capacity;
+    }
+
+    //inserto eldato
+    //si es null:
+    if (map->buckets[indice] == NULL){
+        map->buckets[indice] = createPair(key, value);  //creo un nuevo par
+        map->size++;                                    //y aumento la cantidad de datos
+    }
+    //si ya existe
+    else{
+        map->buckets[indice]->value = value;            //solo actualizo el valor en el par
+        
+    }
+
+    map->current = indice; //finalmente actualizo la posicion actual en la que quedé
+
 }
 
 // 3. Implemente la función Pair * searchMap(HashMap * map, char * key), la cual retorna el Pair asociado a la clave ingresada. 
