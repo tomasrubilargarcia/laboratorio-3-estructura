@@ -136,3 +136,9 @@ hashmap.c:177:58: error: expected identifier before ‘!=’ token
   177 |         if (map->buckets[i] != NULL && map->buckets[i]-> != NULL){
       |                                                          ^~
 40910ab
+Mon Apr 20 02:33:49 AM UTC 2026: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  16|1
+total_score: 50/60
+eb51d51
