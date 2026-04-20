@@ -133,7 +133,16 @@ Pair * searchMap(HashMap * map,  char * key) {
 // Recuerde actualizar la variable size.
 
 void eraseMap(HashMap * map,  char * key) {    
+    if (map == NULL || key == NULL){
+        return;
+    }
 
+    Pair* parsito = searchMap(map, key);
+
+    if(parsito != NULL){
+        map->buckets[map->current] = NULL;
+        map->size--;
+    }
     
 
 }
