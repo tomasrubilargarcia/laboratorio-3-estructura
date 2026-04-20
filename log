@@ -184,3 +184,15 @@ hashmap.c:224:58: error: ‘oldBuckets’ is a pointer to pointer; did you mean 
       |                                                          ^~
       |                                                (*        )
 1c1adb1
+Mon Apr 20 02:44:27 AM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:211:5: error: ‘maps’ undeclared (first use in this function); did you mean ‘map’?
+  211 |     maps->buckets = malloc(map->capacity * sizeof(Pair *));
+      |     ^~~~
+      |     map
+hashmap.c:211:5: note: each undeclared identifier is reported only once for each function it appears in
+1110e07

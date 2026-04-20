@@ -221,7 +221,7 @@ void enlarge(HashMap * map) {
     //reinsertar los datos validos
     for (long i=0; i < oldCapacity; i++){
         if (oldBuckets[i] != NULL && oldBuckets[i]->key != NULL){
-            insertMap(map, oldBuckets[i]->key, oldBuckets->value);
+            insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
         }
     }
 
