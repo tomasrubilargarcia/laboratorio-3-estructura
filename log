@@ -122,3 +122,17 @@ hashmap.c:177:59: error: expected identifier before ‘!=’ token
   177 |         if (map->buckets[i] != NULL && maps->buckets[i]-> != NULL){
       |                                                           ^~
 bff7858
+Mon Apr 20 02:33:33 AM UTC 2026: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:161:58: error: expected identifier before ‘!=’ token
+  161 |         if (map->buckets[i] != NULL && map->buckets[i]-> != NULL){
+      |                                                          ^~
+hashmap.c: In function ‘nextMap’:
+hashmap.c:177:58: error: expected identifier before ‘!=’ token
+  177 |         if (map->buckets[i] != NULL && map->buckets[i]-> != NULL){
+      |                                                          ^~
+40910ab
