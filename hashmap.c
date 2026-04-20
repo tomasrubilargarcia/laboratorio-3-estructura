@@ -140,7 +140,7 @@ void eraseMap(HashMap * map,  char * key) {
     Pair* parsito = searchMap(map, key);
 
     if(parsito != NULL){
-        map->buckets[map->current] = NULL;
+        map->buckets[map->current]->key = NULL;
         map->size--;
     }
     
