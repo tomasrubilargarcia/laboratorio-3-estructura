@@ -108,6 +108,20 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 Pair * searchMap(HashMap * map,  char * key) {   
 
+    if (map == NULL || key == NULL){
+        return NULL;
+    }
+
+    long indice = hash(key, map->capacity);
+
+    while(map->buckets[indice] != NULL){
+        if(strcmp(map->buckets[indice]->key, key) == 0){
+            map->current = indice;
+            return map->buckets[indice];
+        }
+
+        indice = (indice +1) % map->capacity;
+    }
 
     return NULL;
 }
@@ -120,6 +134,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 void eraseMap(HashMap * map,  char * key) {    
 
+    
 
 }
 
