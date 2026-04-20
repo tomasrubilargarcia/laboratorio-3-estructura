@@ -216,7 +216,7 @@ void enlarge(HashMap * map) {
     }
 
     //reinicio el tamaño actual
-    map->size = 0 //en 0 para que vaya incrementando al volver a insertar los datos
+    map->size = 0; //en 0 para que vaya incrementando al volver a insertar los datos
 
     //reinsertar los datos validos
     for (long i=0; i < oldCapacity; i++){
