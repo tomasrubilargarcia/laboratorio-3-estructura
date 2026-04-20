@@ -208,7 +208,7 @@ void enlarge(HashMap * map) {
 
     //agrando la capacidad y creo el new arreglo pa
     map->capacity = (map->capacity)*2;
-    maps->buckets = malloc(map->capacity * sizeof(Pair *));
+    map->buckets = malloc(map->capacity * sizeof(Pair *));
 
     //inicualizo el arreglo nuevo con NULL
     for(long i=0; i < map->capacity; i++){
